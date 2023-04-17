@@ -2,7 +2,11 @@
     <main>
         <section class="container">
             <div class="row">
-                <CharacterCard v-for="(card,index) in store.cardList" :key="card.id" :card="card"/>
+                <div class="cards">
+                    <ul>
+                         <CharacterCard v-for="(card,index) in store.cardList" :key="card.id" :card="card"/>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -29,5 +33,13 @@ import CharacterCard from './CharacterCard.vue';
 main{
     background-color: goldenrod;
 }
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
 
 </style>

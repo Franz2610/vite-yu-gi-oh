@@ -24,7 +24,7 @@ import MainCard from './MainCard.vue';
       getCard(){
         const url = store.url
         axios.get(url).then((res) =>{
-          store.cardList = res.data.results;
+          store.cardList = res.data.data;
         });
       }
     },
