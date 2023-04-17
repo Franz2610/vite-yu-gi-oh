@@ -19,7 +19,7 @@ img{
     width: 10%;
 }
 header{
-    display: flex
+    display: flex;
 }
 
 </style>

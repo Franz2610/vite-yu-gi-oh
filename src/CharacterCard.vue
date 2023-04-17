@@ -1,9 +1,11 @@
 <template>
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card">
-            <img class="img-fluid" :src="card.card_images[0].image_url" :alt="card.name">
-            <h4>{{ card.name }}</h4>
-            <h5>{{ card.archetype }}</h5>
+            <img class="img-fluid card-img" :src="card.card_images[0].image_url" :alt="card.name">
+            <div class="text-card">
+                <h4>{{ card.name }}</h4>
+                <h5 class="arche">{{ card.archetype }}</h5>
+            </div>
         </div>
     </div>
 </template>
@@ -16,14 +18,27 @@
 </script>
 
 <style lang="scss" scoped>
-img{
+
+.card{
+    padding: 20px;
+    width: calc(100% / 5);
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+.card-img{
     min-width: 100%;
     max-height: 200px;
     object-fit: contain;
 }
-.card{
-    padding: 50px;
-    width: calc(100% / 5);
+.text-card{
+    width: 140px;
+    height: 140px;
+    background-color: goldenrod;
+    color: white;
 }
-
+.arche{
+    color: black;
+    float: inline-end;
+}
 </style>

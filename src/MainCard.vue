@@ -1,13 +1,9 @@
 <template>
     <main>
         <section class="container">
-            <div class="row">
-                <div class="cards">
-                    <ul>
-                         <CharacterCard v-for="(card,index) in store.cardList" :key="card.id" :card="card"/>
-                    </ul>
-                </div>
-            </div>
+                 <ul>
+                    <CharacterCard v-for="(card,index) in store.cardList" :key="card.id" :card="card"/>
+                </ul>
         </section>
     </main>
 </template>
@@ -32,14 +28,18 @@ import CharacterCard from './CharacterCard.vue';
 <style lang="scss" scoped>
 main{
     background-color: goldenrod;
+    padding: 85px;
 }
 ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-items: center;
     justify-content: center;
+    text-align: center;
 }
-
-
+.container{
+    background-color: white;
+    margin: 0 auto;
+}
 </style>
